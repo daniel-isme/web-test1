@@ -1,6 +1,6 @@
 ﻿# Задание
 
-[Перейти к заданию](Task/Version1/Version1.md)
+[Перейти к заданию](Task/Version2/Version2.md)
 
 # Запуск проекта в Visual Studio 2017
 

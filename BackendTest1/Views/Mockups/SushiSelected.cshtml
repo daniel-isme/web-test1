@@ -1,0 +1,52 @@
+﻿@model dynamic
+@{
+    ViewBag.Title = "Sushi";
+}
+
+<h2>Sushi</h2>
+
+<form class="form-horizontal">
+    <table class="table row">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Remains</th>
+            <th>&nbsp;</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>1</td>
+            <td>Alaska roll</td>
+            <td>5</td>
+            <td><button class="btn btn-default">Add</button></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>California roll</td>
+            <td>5</td>
+            <td><button class="btn btn-default">Remove</button></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Philadelphia roll</td>
+            <td>5</td>
+            <td><button class="btn btn-default">Remove</button></td>
+        </tr>
+        </tbody>
+    </table>
+
+    <div class="form-group">
+        <label class="col-md-2 control-label">Selected: </label>
+        <div class="col-md-10">
+            <p class="form-control-static">California roll, Philadelphia roll</p>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-10 col-md-offset-2">
+            <button class="btn btn-primary">Proceed to checkout</button>
+        </div>
+    </div>
+</form>
