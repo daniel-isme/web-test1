@@ -44,5 +44,12 @@ namespace BackendTest1.Controllers
             }
             return this.View(model);
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Checkout(CheckoutViewModel model)
+        {
+            return this.View(model);
+        }
     }
 }
