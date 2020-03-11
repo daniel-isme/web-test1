@@ -1,0 +1,35 @@
+﻿@model BackendTest1.Models.SushiViewModel
+@{
+    ViewBag.Title = "Sushi";
+}
+
+<h2>Sushi</h2>
+
+<form asp-action="Index" class="form-horizontal">
+    @for (int i = 0; i < Model.sushiItems.Count; i++)
+    {
+        <input type="hidden" asp-for="@Model.sushiItems[i].Name" />
+        <input type="hidden" asp-for="@Model.sushiItems[i].Remains" />
+    }
+    <table class="table row">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Remains</th>
+                <th>&nbsp;</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (int i = 0; i < Model.sushiItems.Count; i++)
+            {
+                <tr>
+                    <td>@(i + 1)</td>
+                    <td>@Model.sushiItems[i].Name</td>
+                    <td>@Model.sushiItems[i].Remains</td>
+                    <td><button type="submit" name="SushiItem" class="btn btn-default" value="@Model.sushiItems[i].Name">Add</button></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</form>

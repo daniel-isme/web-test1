@@ -1,0 +1,49 @@
+﻿@model BackendTest1.Models.SushiViewModel
+@{
+    ViewBag.Title = "Sushi";
+    //String sushies = "";
+    //foreach (var sushi in Model.names)
+    //{
+    //    sushies += sushi;
+    //    sushies += ", ";
+    //}
+}
+
+<h2>Sushi</h2>
+
+<form asp-action="SushiSelected" class="form-horizontal">
+    <table class="table row">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Remains</th>
+                <th>&nbsp;</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (int i = 0; i < Model.sushiItems.Count; i++)
+            {
+                <tr>
+                    <td>@(i + 1)</td>
+                    <td>@Model.sushiItems[i].Name</td>
+                    <td>@Model.sushiItems[i].Remains</td>
+                    <td><button type="submit" name="SushiItem" class="btn btn-default" value="@Model.sushiItems[i].Name">Add</button></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <div class="form-group">
+        <label class="col-md-2 control-label">Selected: </label>
+        <div class="col-md-10">
+            <p class="form-control-static">Sushi, Sushi</p>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-10 col-md-offset-2">
+            <button class="btn btn-primary" value="Checkout">Proceed to checkout</button>
+        </div>
+    </div>
+</form>
